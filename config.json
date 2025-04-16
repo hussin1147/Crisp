@@ -1,0 +1,14 @@
+{
+  "config_version": "1.0",
+  "target_columns": [
+    "OrderID", "OrderDate", "ProductId", "ProductName", "Quantity", "Unit"
+  ],
+  "transformations": [
+    { "operation": "rename_and_parse", "source_column": "Order Number", "target_column": "OrderID", "target_type": "integer" },
+    { "operation": "combine_and_parse_date", "source_columns": ["Year", "Month", "Day"], "target_column": "OrderDate", "date_format": "%Y-%m-%d" },
+    { "operation": "rename_and_parse", "source_column": "Product Number", "target_column": "ProductId", "target_type": "string" },
+    { "operation": "rename_proper_case_and_parse", "source_column": "Product Name", "target_column": "ProductName", "target_type": "string" },
+    { "operation": "rename_and_parse", "source_column": "Count", "target_column": "Quantity", "target_type": "decimal", "parse_options": { "locale": "en_US" } },
+    { "operation": "add_fixed_value", "target_column": "Unit", "value": "kg", "target_type": "string" }
+  ]
+}
