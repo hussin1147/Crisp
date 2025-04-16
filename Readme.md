@@ -20,8 +20,8 @@ All assumptions and simplifications made during development are listed in the se
 
 1. Clone the repo  
    ```bash
-   git clone https://github.com/your-org/crisp-data-transformer.git
-   cd crisp-data-transformer
+   git clone https://github.com/hussin1147/Crisp.git
+   cd Crisp
    ```
 
 2. Edit `config.json`  
